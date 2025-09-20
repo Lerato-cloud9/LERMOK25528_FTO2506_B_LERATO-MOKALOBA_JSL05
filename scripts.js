@@ -1,22 +1,4 @@
 import { initialTasks } from "./initialData.js";
-
-// --- Error handling for localStorage --
-function safeGetTasks() {
-  try {
-    return JSON.parse(localStorage.getItem("tasks")) || initialTasks;
-  } catch (error) {
-    console.error("Failed to load tasks:", error);
-    return initialTasks; // fallback so app still works
-  }
-
-  function safeSaveTasks(tasks) {
-  try {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  } catch (error) {
-    console.error("Failed to save tasks:", error);
-  }
-}
-}
 /**
  * Creates a single task DOM element.
  * @param {Object} task - Task data object.
@@ -131,6 +113,24 @@ const addTaskBtn = document.querySelector(".add-task-btn");
 
 // Get the "×" close button inside the modal
 const closeBtn = document.getElementById("close-modal-btn");
+
+// --- Error handling for localStorage --
+function safeGetTasks() {
+  try {
+    return JSON.parse(localStorage.getItem("tasks")) || initialTasks;
+  } catch (error) {
+    console.error("Failed to load tasks:", error);
+    return initialTasks; // fallback so app still works
+  }
+
+  function safeSaveTasks(tasks) {
+  try {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  } catch (error) {
+    console.error("Failed to save tasks:", error);
+  }
+}
+}
 
 // When the "Add New Task" button is clicked → open the modal
 addTaskBtn.addEventListener("click", () => {
