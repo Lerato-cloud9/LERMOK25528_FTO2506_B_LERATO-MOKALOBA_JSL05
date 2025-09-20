@@ -336,6 +336,25 @@ form select {
   padding-right: 1rem;
 }
 
+/* Submit Button */
+form button[type="submit"] {
+  margin-top: 16px;
+  width: 100%; /* Make it full width */
+  padding: 10px 16px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+  background-color: #4338ca;
+}
+
 /* ========================
    Responsive Styles
 ======================== */
