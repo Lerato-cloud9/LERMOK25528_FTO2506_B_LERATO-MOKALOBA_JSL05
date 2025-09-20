@@ -114,6 +114,9 @@ function initTaskBoard() {
     tasks.push(newTask);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     renderTasks(tasks);
+
+    form.reset();
+    modal.close();
 }
 
 // Wait until DOM is fully loaded
