@@ -101,22 +101,6 @@ function initTaskBoard() {
     form.reset();      // clear old values
     modal.showModal(); // open fresh modal
   });
-
-  // For new tasks to display on the board
-  const newTask = {
-      id: Date.now(),
-      title: form.title.value,
-      description: form.description.value,
-      status: form.status.value,
-    };
-
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || initialTasks;
-    tasks.push(newTask);
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    renderTasks(tasks);
-
-    form.reset();
-    modal.close();
 }
 
 // Wait until DOM is fully loaded
