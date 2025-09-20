@@ -91,6 +91,16 @@ function initTaskBoard() {
   clearExistingTasks();
   renderTasks(initialTasks);
   setupModalCloseHandler();
+
+  // Handle Add Task button to clear modal before opening
+  const addTaskBtn = document.querySelector(".add-task-btn");
+  const modal = document.getElementById("task-modal");
+  const form = document.getElementById("task-form");
+
+  addTaskBtn.addEventListener("click", () => {
+    form.reset();      // clear old values
+    modal.showModal(); // open fresh modal
+  });
 }
 
 // Wait until DOM is fully loaded
