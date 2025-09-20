@@ -95,3 +95,6 @@ function initTaskBoard() {
 
 // Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", initTaskBoard);
+
+// Get the dialog modal element by its ID
+const modal = document.getElementById("task-modal");
