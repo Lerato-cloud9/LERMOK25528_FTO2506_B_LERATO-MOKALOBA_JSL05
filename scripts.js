@@ -111,6 +111,7 @@ function initTaskBoard() {
     };
 
     let tasks = JSON.parse(localStorage.getItem("tasks")) || initialTasks;
+    tasks.push(newTask);
 }
 
 // Wait until DOM is fully loaded
