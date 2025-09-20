@@ -1,5 +1,12 @@
 import { initialTasks } from "./initialData.js";
 
+// --- Error handling for localStorage --
+function safeGetTasks() {
+  try {
+    return JSON.parse(localStorage.getItem("tasks")) || initialTasks;
+  } catch (error) 
+  }
+}
 /**
  * Creates a single task DOM element.
  * @param {Object} task - Task data object.
