@@ -104,3 +104,8 @@ const addTaskBtn = document.querySelector(".add-task-btn");
 
 // Get the "×" close button inside the modal
 const closeBtn = document.getElementById("close-modal-btn");
+
+// When the "Add New Task" button is clicked → open the modal
+addTaskBtn.addEventListener("click", () => {
+  modal.showModal();
+});
