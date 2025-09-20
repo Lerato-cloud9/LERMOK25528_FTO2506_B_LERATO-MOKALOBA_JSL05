@@ -98,3 +98,6 @@ document.addEventListener("DOMContentLoaded", initTaskBoard);
 
 // Get the dialog modal element by its ID
 const modal = document.getElementById("task-modal");
+
+// Get the "Add New Task" button 
+const addTaskBtn = document.querySelector(".add-task-btn");
