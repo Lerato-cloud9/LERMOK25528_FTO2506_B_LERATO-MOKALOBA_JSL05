@@ -8,6 +8,14 @@ function safeGetTasks() {
     console.error("Failed to load tasks:", error);
     return initialTasks; // fallback so app still works
   }
+
+  function safeSaveTasks(tasks) {
+  try {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  } catch (error) {
+    console.error("Failed to save tasks:", error);
+  }
+}
 }
 /**
  * Creates a single task DOM element.
