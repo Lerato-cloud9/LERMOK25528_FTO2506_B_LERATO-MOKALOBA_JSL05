@@ -109,3 +109,8 @@ const closeBtn = document.getElementById("close-modal-btn");
 addTaskBtn.addEventListener("click", () => {
   modal.showModal();
 });
+
+// When the "×" close button is clicked → close the modal
+closeBtn.addEventListener("click", () => {
+  modal.close();
+});
