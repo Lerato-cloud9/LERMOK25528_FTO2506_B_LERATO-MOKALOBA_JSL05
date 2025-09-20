@@ -109,6 +109,8 @@ function initTaskBoard() {
       description: form.description.value,
       status: form.status.value,
     };
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || initialTasks;
 }
 
 // Wait until DOM is fully loaded
