@@ -134,6 +134,11 @@ header {
     transition: background-color 0.2s;/* For hover effect */
 }
 
+/* Button hover effect */
+.add-task-btn:hover {
+    background-color: #4338ca;
+}
+
 .logo-mobile {
   display: none; /* Hidden on desktop; shown on smaller screens */
 }
