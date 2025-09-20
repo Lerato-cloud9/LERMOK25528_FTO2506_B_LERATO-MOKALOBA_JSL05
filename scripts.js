@@ -126,7 +126,7 @@ closeBtn.addEventListener("click", () => {
 });
 
   // For new tasks to display on the board
-const form = document.getElementById("task-form"); // make sure this points to your form
+const form = document.getElementById("task-form"); 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   
