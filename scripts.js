@@ -126,6 +126,10 @@ closeBtn.addEventListener("click", () => {
 });
 
   // For new tasks to display on the board
+const form = document.getElementById("task-form"); // make sure this points to your form
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
   const newTask = {
       id: Date.now(),
       title: form.title.value,
@@ -140,3 +144,4 @@ closeBtn.addEventListener("click", () => {
 
     form.reset();
     modal.close();
+  });
