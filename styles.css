@@ -139,6 +139,12 @@ header {
     background-color: #4338ca;
 }
 
+/* Plus icon inside the button */
+.plus-icon {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .logo-mobile {
   display: none; /* Hidden on desktop; shown on smaller screens */
 }
