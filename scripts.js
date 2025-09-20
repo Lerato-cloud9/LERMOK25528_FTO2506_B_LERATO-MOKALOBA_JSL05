@@ -101,6 +101,14 @@ function initTaskBoard() {
     form.reset();      // clear old values
     modal.showModal(); // open fresh modal
   });
+
+  // For new tasks to display on the board
+  const newTask = {
+      id: Date.now(),
+      title: form.title.value,
+      description: form.description.value,
+      status: form.status.value,
+    };
 }
 
 // Wait until DOM is fully loaded
