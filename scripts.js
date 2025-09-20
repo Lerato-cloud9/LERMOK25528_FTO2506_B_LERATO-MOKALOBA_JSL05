@@ -154,9 +154,9 @@ form.addEventListener("submit", (e) => {
       status: form.status.value,
     };
    // Get existing tasks from localStorage
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || initialTasks;
+    let tasks = safeGetTasks();
     tasks.push(newTask);
-    localStorage.setItem("tasks", JSON.stringify(tasks)); // Save back to localStorage
+    safeGetTasks(tasks);
     renderTasks(tasks);
 
     form.reset();
