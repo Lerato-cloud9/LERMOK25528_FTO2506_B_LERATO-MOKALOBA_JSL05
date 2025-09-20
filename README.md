@@ -48,3 +48,56 @@ By studying the JSL04 solution you will:
 ## License
 
 Provided for **educational purposes only**.
+
+Task Management Board
+📌 Project Description
+
+The Task Management Board is a simple and interactive web application that allows users to create, view, and organize tasks across three categories: To Do, Doing, and Done. Tasks are saved in localStorage, ensuring that they remain available even after refreshing or reopening the page.
+
+The application includes an Add New Task modal where users can enter task details such as title, description, and status.
+
+🛠️ Technologies Used
+
+HTML5 – structure of the application
+
+CSS3 – styling and layout
+
+JavaScript – dynamic behavior, DOM manipulation, and localStorage handling
+
+✨ Features
+
+Add new tasks with a title, description, and status
+
+Display tasks in their correct columns (To Do, Doing, Done)
+
+Tasks are stored in localStorage to persist data after refresh
+
+Modal dialog for creating tasks with placeholder inputs
+
+Prevents page reload on form submission
+
+Option to delete specific tasks (in progress feature)
+
+✅ Working Example
+
+When you click the + Add New Task button:
+
+A modal dialog will open.
+
+You can enter a title, description, and select a status.
+
+Once submitted, the task will appear in the appropriate column.
+
+Refreshing the page keeps all previously added tasks thanks to localStorage.
+
+✅ Working Example
+
+When you click the + Add New Task button:
+
+A modal dialog will open.
+
+You can enter a title, description, and select a status.
+
+Once submitted, the task will appear in the appropriate column.
+
+Refreshing the page keeps all previously added tasks thanks to localStorage.
