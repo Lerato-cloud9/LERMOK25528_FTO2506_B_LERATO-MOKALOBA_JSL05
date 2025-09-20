@@ -4,7 +4,9 @@ import { initialTasks } from "./initialData.js";
 function safeGetTasks() {
   try {
     return JSON.parse(localStorage.getItem("tasks")) || initialTasks;
-  } catch (error) 
+  } catch (error) {
+    console.error("Failed to load tasks:", error);
+    return initialTasks; // fallback so app still works
   }
 }
 /**
