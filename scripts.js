@@ -120,45 +120,44 @@ function safeGetTasks() {
     return JSON.parse(localStorage.getItem("tasks")) || initialTasks;
   } catch (error) {
     console.error("Failed to load tasks:", error);
-    return initialTasks; // fallback so app still works
+    return initialTasks;
   }
+}
 
-  function safeSaveTasks(tasks) {
+function safeSaveTasks(tasks) {
   try {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   } catch (error) {
     console.error("Failed to save tasks:", error);
   }
 }
-}
 
-// When the "Add New Task" button is clicked → open the modal
-addTaskBtn.addEventListener("click", () => {
-  modal.showModal();
-});
-
-// When the "×" close button is clicked → close the modal
-closeBtn.addEventListener("click", () => {
-  modal.close();
-});
-
-  // For new tasks to display on the board
+// Form submit handler
 const form = document.getElementById("task-form"); 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
-  const newTask = {
-      id: Date.now(),
-      title: form.title.value,
-      description: form.description.value,
-      status: form.status.value,
-    };
-   // Get existing tasks from localStorage
-    let tasks = safeGetTasks();
-    tasks.push(newTask);
-    safeGetTasks(tasks);
-    renderTasks(tasks);
 
-    form.reset();
-    modal.close();
-  });
+  const newTask = {
+    id: Date.now(),
+    title: form.title.value,
+    description: form.description.value,
+    status: form.status.value,
+  };
+
+  // 1. Get current tasks safely
+  let tasks = safeGetTasks();
+
+  // 2. Add new task
+  tasks.push(newTask);
+
+  // 3. Save updated tasks to localStorage
+  safeSaveTasks(tasks);
+
+  // 4. Re-render board
+  clearExistingTasks();
+  renderTasks(tasks);
+
+  // 5. Reset form and close modal
+  form.reset();
+  modal.close();
+});
