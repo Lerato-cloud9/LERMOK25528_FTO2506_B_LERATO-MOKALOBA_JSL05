@@ -88,7 +88,8 @@ function setupModalCloseHandler() {
  */
 function initTaskBoard() {
   clearExistingTasks();
-  renderTasks(initialTasks);
+  const tasks = safeGetTasks();  // <-- load tasks from localStorage
+  renderTasks(tasks);
   setupModalCloseHandler();
 
   // Handle Add Task button to clear modal before opening
