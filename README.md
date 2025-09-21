@@ -58,46 +58,50 @@ The application includes an Add New Task modal where users can enter task detail
 
 🛠️ Technologies Used
 
-HTML5 – structure of the application
+*HTML5 – structure of the application
 
-CSS3 – styling and layout
+*CSS3 – styling and layout
 
-JavaScript – dynamic behavior, DOM manipulation, and localStorage handling
+*JavaScript – dynamic behavior, DOM manipulation, and localStorage handling
+
+*LocalStorage API – storing and retrieving tasks so data stays after refresh
+
+*Dialog Element – native modal functionality for adding tasks
 
 ✨ Features
 
-Add new tasks with a title, description, and status
+-Add new tasks with a title, description, and status
 
-Display tasks in their correct columns (To Do, Doing, Done)
+-Display tasks in their correct columns (To Do, Doing, Done)
 
-Tasks are stored in localStorage to persist data after refresh
+-Tasks are stored in localStorage to persist data after refresh
 
-Modal dialog for creating tasks with placeholder inputs
+-Modal dialog for creating tasks with placeholder inputs
 
-Prevents page reload on form submission
+-Prevents page reload on form submission
 
-Option to delete specific tasks (in progress feature)
 
-✅ Working Example
-
-When you click the + Add New Task button:
-
-A modal dialog will open.
-
-You can enter a title, description, and select a status.
-
-Once submitted, the task will appear in the appropriate column.
-
-Refreshing the page keeps all previously added tasks thanks to localStorage.
 
 ✅ Working Example
 
-When you click the + Add New Task button:
+*When you click the + Add New Task button:
 
-A modal dialog will open.
+*A modal dialog will open.
 
-You can enter a title, description, and select a status.
+*You can enter a title, description, and select a status.
 
-Once submitted, the task will appear in the appropriate column.
+*Once submitted, the task will appear in the appropriate column.
 
-Refreshing the page keeps all previously added tasks thanks to localStorage.
+*Refreshing the page keeps all previously added tasks thanks to localStorage.
+
+✅ Working Example
+
+-When you click the + Add New Task button:
+
+-A modal dialog will open.
+
+-You can enter a title, description, and select a status.
+
+-Once submitted, the task will appear in the appropriate column.
+
+-Refreshing the page keeps all previously added tasks thanks to localStorage.
